@@ -7,10 +7,12 @@ fs.readFile('exports/playlistItems_01_Musik.json', 'utf8', function (err, data) 
     return console.log(err)
   } else {
     playlist = JSON.parse(data)
-    const randomVideo = playlist[getRandomInt(playlist.length)]
-    console.log('"' + randomVideo.snippet.title + '"')
+    const playlistLength = playlist.length
+    const randomVideoIndex = getRandomInt(playlistLength)
+    const randomVideo = playlist[randomVideoIndex]
+    console.log('[' + (randomVideoIndex + 1) + '/' + playlistLength + '] "' + randomVideo.snippet.title + '"')
     // console.log(randomVideo.contentDetails.videoId)
-    console.log('https://youtu.be/' + randomVideo.contentDetails.videoId)
+    console.log(' ╰─ https://youtu.be/' + randomVideo.contentDetails.videoId)
   }
 })
 
