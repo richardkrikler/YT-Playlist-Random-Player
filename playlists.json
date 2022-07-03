@@ -1,0 +1,46 @@
+[{
+  "kind": "youtube#playlist",
+  "etag": "H7sxOurMUDL4CWDZlm1dxoNh1M0",
+  "id": "PLHWMzLP4j2gdPf_ZC9n9RKE1aWFcgYSf2",
+  "snippet": {
+    "publishedAt": "2018-04-07T20:22:12Z",
+    "channelId": "UCim7a_V5yFwTonVsxlEQtwQ",
+    "title": "01_Musik",
+    "description": "",
+    "thumbnails": {
+      "default": {
+        "url": "https://i.ytimg.com/vi/rPmcLzgnlo8/default.jpg",
+        "width": 120,
+        "height": 90
+      },
+      "medium": {
+        "url": "https://i.ytimg.com/vi/rPmcLzgnlo8/mqdefault.jpg",
+        "width": 320,
+        "height": 180
+      },
+      "high": {
+        "url": "https://i.ytimg.com/vi/rPmcLzgnlo8/hqdefault.jpg",
+        "width": 480,
+        "height": 360
+      },
+      "standard": {
+        "url": "https://i.ytimg.com/vi/rPmcLzgnlo8/sddefault.jpg",
+        "width": 640,
+        "height": 480
+      },
+      "maxres": {
+        "url": "https://i.ytimg.com/vi/rPmcLzgnlo8/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720
+      }
+    },
+    "channelTitle": "R",
+    "localized": {
+      "title": "01_Musik",
+      "description": ""
+    }
+  },
+  "contentDetails": {
+    "itemCount": 831
+  }
+}]
