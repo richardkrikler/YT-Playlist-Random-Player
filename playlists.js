@@ -56,7 +56,8 @@ function getPlaylists(auth) {
   service.playlists.list({
     auth: auth,
     part: 'snippet,contentDetails',
-    channelId: 'channelId'
+    mine: true,
+    maxResults: 50
   }, (err, response) => {
     if (err) {
       console.log('The API returned an error: ' + err)
@@ -65,7 +66,7 @@ function getPlaylists(auth) {
 
     console.log(response.data.items)
 
-    fs.writeFile('exports/playlist.json', JSON.stringify(response.data.items), err => {
+    fs.writeFile('exports/playlists.json', JSON.stringify(response.data.items), err => {
       if (err) {
         console.log(err)
       }

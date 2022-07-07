@@ -2,3 +2,4 @@ node_modules
 exports/*
 !exports/.gitkeep
 client_secret.json
+.env

@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 var fs = require('fs')
 var readline = require('readline')
 var {
@@ -57,7 +59,7 @@ function getPlaylistItems(auth, nextPageToken = '') {
   service.playlistItems.list({
     auth: auth,
     part: 'snippet,contentDetails',
-    playlistId: 'playlistId',
+    playlistId: process.env.PLAYLIST_ID,
     maxResults: 50,
     pageToken: nextPageToken
   }, (err, response) => {
