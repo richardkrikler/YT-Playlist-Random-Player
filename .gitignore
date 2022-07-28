@@ -1,5 +1,12 @@
+.DS_Store
+.idea
 node_modules
-exports/*
-!exports/.gitkeep
-client_secret.json
-.env
+
+client/dist
+client/.vscode
+
+server/exports/*
+!server/exports/.gitkeep
+server/client_secret.json
+server/.credentials/*
+!server/.credentials/.gitkeep
