@@ -14,7 +14,8 @@
     <div class="flex justify-center gap-3">
       <button-element text="Home" @click="$router.push({name: 'default'})"/>
       <button-element :text="(playlistLoaded ? 'Reload' : 'Load') + ' Playlist'" @click="loadPlaylist"/>
-      <button-element text="Play random video" @click="playRandomVideo"/>
+      <button-element text="Play random video"
+                      @click="$store.dispatch('playRandomVideo').then(() => $router.push({name: 'PlayerPage'}))"/>
     </div>
   </div>
 </template>
@@ -50,15 +51,6 @@ export default {
       await axios.get(BASE_URL + 'loadPlaylist/' + this.playlist.id)
           .then(res => {
             this.playlistLoaded = res.data
-          })
-    },
-
-    async playRandomVideo() {
-      await axios.get(BASE_URL + 'randomVideo/' + this.playlist.id)
-          .then(res => {
-            this.$store.state.save.videoId = res.data
-            this.$store.dispatch('save')
-            this.$router.push({name: 'PlayerPage'})
           })
     }
   },
