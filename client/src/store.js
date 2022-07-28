@@ -2,7 +2,15 @@ export const BASE_URL = 'http://localhost:2001/'
 
 export default {
     state: {
-        currentPlaylist: null,
-        videoId: null
+        save: {
+            currentPlaylist: null,
+            videoId: null
+        }
+    },
+
+    actions: {
+        save() {
+            localStorage.setItem('save', JSON.stringify(this.state.save))
+        }
     }
 }

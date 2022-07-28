@@ -49,7 +49,6 @@ export default {
     async loadPlaylist() {
       await axios.get(BASE_URL + 'loadPlaylist/' + this.playlist.id)
           .then(res => {
-            console.log(res.data)
             this.playlistLoaded = res.data
           })
     },
@@ -57,14 +56,15 @@ export default {
     async playRandomVideo() {
       await axios.get(BASE_URL + 'randomVideo/' + this.playlist.id)
           .then(res => {
-            this.$store.state.videoId = res.data
+            this.$store.state.save.videoId = res.data
+            this.$store.dispatch('save')
             this.$router.push({name: 'PlayerPage'})
           })
     }
   },
 
   created() {
-    this.playlist = this.$store.state.currentPlaylist
+    this.playlist = this.$store.state.save.currentPlaylist
     this.isPlaylistLoaded()
   }
 }

@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-6">
     <div>
       <iframe id="ytplayer" type="text/html" width="640" height="360" class="max-w-full"
-              :src="'https://www.youtube.com/embed/' + $store.state.videoId + '?autoplay=1'"
+              :src="'https://www.youtube.com/embed/' + $store.state.save.videoId + '?autoplay=1'"
               frameborder="0"/>
     </div>
 

@@ -85,7 +85,8 @@ export default {
     },
 
     openPlaylist(pl) {
-      this.$store.state.currentPlaylist = pl
+      this.$store.state.save.currentPlaylist = pl
+      this.$store.dispatch('save')
       this.$router.push({name: 'PlaylistPage'})
     }
   },

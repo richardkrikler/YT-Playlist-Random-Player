@@ -11,7 +11,14 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  created() {
+    const localStorageSave = localStorage.getItem('save')
+    if (localStorageSave !== null) {
+      this.$store.state.save = JSON.parse(localStorageSave)
+    }
+  }
 }
 </script>
 
