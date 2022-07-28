@@ -21,6 +21,13 @@ export default {
 
   components: {
     ButtonElement
+  },
+
+  created() {
+    const videoId = this.$store.state.save.videoId
+    if (videoId === null) {
+      window.location.href = '/'
+    }
   }
 }
 </script>

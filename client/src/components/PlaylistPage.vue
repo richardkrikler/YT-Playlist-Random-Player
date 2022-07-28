@@ -64,8 +64,13 @@ export default {
   },
 
   created() {
-    this.playlist = this.$store.state.save.currentPlaylist
-    this.isPlaylistLoaded()
+    const playlist = this.$store.state.save.currentPlaylist
+    if (playlist === null) {
+      window.location.href = '/'
+    } else {
+      this.playlist = playlist
+      this.isPlaylistLoaded()
+    }
   }
 }
 </script>
